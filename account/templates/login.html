@@ -1,0 +1,24 @@
+{% extends "theme.html" %}
+
+{% block content %}
+
+
+<h2 align="center">Log in to your Product Hunt account</h2>
+<br>
+<form method="POST" action=" {% url 'login_page' %} " align="center">
+	{% csrf_token %}
+	<br>
+	User Name:
+	<input type="text" name="User Name">
+	<br>
+	<br>
+	Password:
+	<input type="password" name="Password">
+	<br>
+		{{ Wrong }}
+	<br>
+	<input class=' btn btn-primary 'type="submit" value="login">
+</form>
+
+
+{% endblock content %}
