@@ -6,28 +6,29 @@
 	<form method="POST" action=" {% url 'Publish_page' %} " align="center" enctype='multipart/form-data'>
 		{% csrf_token %}
 		<br>
-		Product Name:
+		Title:
 		<br>
-			<input type="text" name="Product Name">
+			<input value='A short sentence about the product' type="text" name="Title">
 			<br>
 			<br>
 		Introduction:
 			<br>
-			<textarea col=100 row=10 name='Introduction'></textarea>
+			<textarea col=100 row=10 name='Introduction'>An introduction about the product</textarea>
 			<br>
 			<br>
-		Product link:
+		Link:
 			<br>
-			<input type="text" name="Product Link">
-			<br>
-			<br>
-		Product icon:
-			<input type="file" name="Product icon">
+			<input value='http://' type="text" name="Link">
 			<br>
 			<br>
-		　　　Image:
+		Icon:
+			<input type="file" name="Icon">
+			<br>
+			<br>
+		Image:
 			<input type="file" name="Image">
 			<br>
+			{{ Wrong }}
 			<br>
 		<input class=' btn btn-primary 'type="submit" value="Publish">
 	</form>
