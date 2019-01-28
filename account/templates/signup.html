@@ -1,0 +1,29 @@
+{% extends "theme.html" %}
+
+{% block content %}
+
+
+<h2 align="center">Create a Product Hunt account</h2>
+<br>
+<form method="POST" action=" {% url 'signup_page' %} " align="center">
+	{% csrf_token %}
+	<br>
+	User Name:
+	<input type="text" name="User Name">
+		<br>
+		{{ Wrong_username }}
+		<br>
+	Password:
+	<input type="password" name="Password">
+	<br>
+	<br>
+	Retype Password:
+	<input type="password" name="Retype Password">
+	<br>
+		{{ Wrong_password }}
+	<br>
+	<input class=' btn btn-primary 'type="submit" value="Register">
+</form>
+
+
+{% endblock content %}
