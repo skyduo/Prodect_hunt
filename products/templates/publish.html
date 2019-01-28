@@ -1,0 +1,35 @@
+{% extends "theme.html" %}
+
+{% block content %}
+<h2 align="center">Publish a new product</h2>
+<br>
+	<form method="POST" action=" {% url 'Publish_page' %} " align="center" enctype='multipart/form-data'>
+		{% csrf_token %}
+		<br>
+		Product Name:
+		<br>
+			<input type="text" name="Product Name">
+			<br>
+			<br>
+		Introduction:
+			<br>
+			<textarea col=100 row=10 name='Introduction'></textarea>
+			<br>
+			<br>
+		Product link:
+			<br>
+			<input type="text" name="Product Link">
+			<br>
+			<br>
+		Product icon:
+			<input type="file" name="Product icon">
+			<br>
+			<br>
+		　　　Image:
+			<input type="file" name="Image">
+			<br>
+			<br>
+		<input class=' btn btn-primary 'type="submit" value="Publish">
+	</form>
+
+{% endblock content %}
